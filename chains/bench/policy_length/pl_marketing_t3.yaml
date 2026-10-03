@@ -1,0 +1,5 @@
+id: pl_marketing_t3
+description: "Policy-length ablation: marketing, T3 full firewall."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_marketing_t3"

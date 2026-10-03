@@ -1,0 +1,4 @@
+id: scale_k4
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_aho AND ablation_combined AND ablation_deberta AND ablation_entropy"

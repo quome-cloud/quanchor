@@ -1,0 +1,6 @@
+id: bench_combined_trig
+description: "Deterministic healthcare firewall + triggered de-obfuscation."
+mode: expression
+fail_policy: fail_closed
+normalize_mode: triggered
+expression: "ablation_combined"

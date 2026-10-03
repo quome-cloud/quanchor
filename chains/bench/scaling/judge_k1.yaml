@@ -1,0 +1,4 @@
+id: judge_k1
+mode: expression
+fail_policy: fail_closed
+expression: "pl_marketing_t0"

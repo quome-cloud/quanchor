@@ -1,0 +1,17 @@
+# E7 InjecAgent chain. Core prompt-injection guards (E7-local variants — see
+# rules/e7/*.yaml; disclosed in findings) AND the general personal-assistant
+# domain scope (rules/e7/scope_injecagent.yaml). Any detector firing -> BLOCK.
+id: e7_injecagent
+description: "E7 InjecAgent guard: core injection defense + personal-assistant domain scope."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+groups:
+  injection: >
+    injection_instruction_override AND injection_system_prompt_exfil AND
+    injection_role_manipulation AND e7_injection_jailbreak_dan AND
+    injection_restriction_bypass AND e7_injection_encoding_obfuscation AND
+    e7_injection_delimiter_escape AND injection_data_exfiltration AND
+    injection_tool_command_abuse AND injection_classifier_only
+expression: >
+  injection AND scope_e7_injecagent

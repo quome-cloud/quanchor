@@ -1,0 +1,4 @@
+id: judge_k16
+mode: expression
+fail_policy: fail_closed
+expression: "pl_marketing_t0 AND pl_marketing_t1 AND pl_marketing_t2 AND pl_marketing_t3 AND pl_healthcare_t0 AND pl_healthcare_t1 AND pl_healthcare_t2 AND pl_healthcare_t3 AND pl_code_t0 AND pl_code_t1 AND pl_code_t2 AND pl_code_t3 AND pl_sql_t0 AND pl_sql_t1 AND pl_sql_t2 AND pl_sql_t3"

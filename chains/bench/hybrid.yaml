@@ -1,0 +1,5 @@
+id: bench_hybrid
+description: "QFIRE deterministic hybrid (aho+regex+entropy+deberta)."
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_hybrid"

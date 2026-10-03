@@ -1,0 +1,7 @@
+# Triage goal-integrity task chain (matrix).
+id: matrix_triage
+description: "Triage goal-integrity task (matrix)."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+expression: "triage_goal_integrity"

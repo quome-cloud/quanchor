@@ -1,0 +1,21 @@
+# Marketing scope chain (expression mode).
+#
+# A request passes if it is clean (injection guards) AND it falls within at least
+# one marketing copywriting sub-scope. Off-topic or adversarial prompts are
+# blocked. Fail-closed.
+
+id: marketing
+description: "Clean + within a marketing copywriting scope."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+groups:
+  injection: >
+    injection_instruction_override AND injection_system_prompt_exfil AND
+    injection_jailbreak_dan AND injection_data_exfiltration
+  marketing_scope: >
+    mk_product_tagline OR mk_product_description OR mk_ad_headline OR
+    mk_marketing_email OR mk_social_post OR mk_seo_blog OR mk_landing_page OR
+    mk_brand_voice_rewrite OR mk_press_release OR mk_call_to_action OR
+    mk_newsletter OR mk_campaign_brainstorm
+expression: "injection AND marketing_scope"

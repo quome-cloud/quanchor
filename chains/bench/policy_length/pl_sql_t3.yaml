@@ -1,0 +1,5 @@
+id: pl_sql_t3
+description: "Policy-length ablation: sql, T3 full firewall."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_sql_t3"

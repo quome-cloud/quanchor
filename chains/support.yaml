@@ -1,0 +1,20 @@
+# Customer-support scope chain (expression mode).
+#
+# A request passes if it is clean (injection guards) AND it falls within at least
+# one customer-support sub-scope. Fail-closed.
+
+id: support
+description: "Clean + within a customer-support scope."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+groups:
+  injection: >
+    injection_instruction_override AND injection_system_prompt_exfil AND
+    injection_jailbreak_dan AND injection_data_exfiltration
+  support_scope: >
+    sup_order_status OR sup_returns_refunds OR sup_account_access OR
+    sup_billing OR sup_shipping OR sup_troubleshooting OR sup_warranty OR
+    sup_subscription OR sup_faq OR sup_password_reset OR
+    sup_appointment_booking OR sup_complaint_escalation
+expression: "injection AND support_scope"

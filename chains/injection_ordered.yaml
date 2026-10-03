@@ -1,0 +1,23 @@
+# Ordered-mode injection-defense chain (iptables-style), for benchmarking the
+# ORDERED collapse mode against the EXPRESSION-mode `default` chain (`bench --compare`).
+#
+# Guards abstain on a clean prompt, so evaluation falls through to the default
+# (ALLOW); any guard that fires BLOCKs first.
+
+id: injection_ordered
+description: "Injection defense in ordered/iptables mode, default-allow."
+mode: ordered
+fail_policy: fail_closed
+provider: ollama
+default: allow
+rules:
+  - injection_instruction_override
+  - injection_system_prompt_exfil
+  - injection_role_manipulation
+  - injection_jailbreak_dan
+  - injection_restriction_bypass
+  - injection_encoding_obfuscation
+  - injection_delimiter_escape
+  - injection_data_exfiltration
+  - injection_tool_command_abuse
+  - injection_classifier_only

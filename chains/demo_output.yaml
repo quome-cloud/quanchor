@@ -1,0 +1,6 @@
+id: demo_output
+description: "Demo: forward + post-response output monitor (safe_range 70-180)."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+expression: "demo_output_monitor"

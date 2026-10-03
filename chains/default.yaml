@@ -1,0 +1,17 @@
+# The default chain, applied when a request selects none.
+#
+# Expression mode: the request must pass every core injection guard. Each guard
+# rule ALLOWs a clean prompt and BLOCKs an attack; the expression is satisfied
+# (ALLOW) only when all guards pass. Fail-closed on detector error.
+
+id: default
+description: "Core prompt-injection defense — all guards must pass."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+expression: >
+  injection_instruction_override AND injection_system_prompt_exfil AND
+  injection_role_manipulation AND injection_jailbreak_dan AND
+  injection_restriction_bypass AND injection_encoding_obfuscation AND
+  injection_delimiter_escape AND injection_data_exfiltration AND
+  injection_tool_command_abuse AND injection_classifier_only

@@ -1,0 +1,5 @@
+id: bench_combined
+description: "Deterministic healthcare firewall: injection (aho+regex+deberta) + PHI."
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_combined"

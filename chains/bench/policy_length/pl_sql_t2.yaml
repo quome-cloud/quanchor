@@ -1,0 +1,5 @@
+id: pl_sql_t2
+description: "Policy-length ablation: sql, T2 paragraph."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_sql_t2"

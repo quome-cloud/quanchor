@@ -1,0 +1,5 @@
+id: pl_healthcare_t1
+description: "Policy-length ablation: healthcare, T1 sentence."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_healthcare_t1"

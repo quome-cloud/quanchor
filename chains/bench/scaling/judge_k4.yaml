@@ -1,0 +1,4 @@
+id: judge_k4
+mode: expression
+fail_policy: fail_closed
+expression: "pl_marketing_t0 AND pl_marketing_t1 AND pl_marketing_t2 AND pl_marketing_t3"

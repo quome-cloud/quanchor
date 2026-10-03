@@ -1,0 +1,11 @@
+# Multi-judge majority-vote chain (3 models, hard 2-of-3 vote) for the ensemble
+# accuracy/latency experiment. Single rule, default-allow ordered mode so the
+# rule's aggregate verdict is the chain verdict.
+id: judge_ensemble
+description: "3-model majority-vote scope judge (llama3.1 + gemma4 + qwen3:8b)."
+mode: ordered
+fail_policy: fail_closed
+provider: ollama
+default: allow
+rules:
+  - ens_no_diagnosis_3vote

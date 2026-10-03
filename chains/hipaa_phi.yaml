@@ -1,0 +1,23 @@
+# Healthcare / PHI chain (expression mode).
+#
+# A request passes only if it is clean (injection guards) AND it stays within a
+# general-health-information / administrative scope: no diagnosis, treatment, or
+# medication dosing, and no PHI exfiltration or re-identification. Each rule
+# ALLOWs an in-scope clinical-adjacent prompt and BLOCKs an out-of-scope or PHI
+# attack; the AND requires all of them to pass. Fail-closed.
+
+id: hipaa_phi
+description: "HIPAA/PHI guardrails: clean + no clinical advice + no PHI exfiltration."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+groups:
+  injection: >
+    injection_instruction_override AND injection_system_prompt_exfil AND
+    injection_jailbreak_dan AND injection_data_exfiltration AND
+    injection_role_manipulation
+expression: >
+  injection AND hc_no_diagnosis AND hc_no_treatment_recommendation AND
+  hc_no_medication_dosing AND hc_refuse_clinical_advice AND
+  hc_phi_other_patient_record AND hc_phi_ssn_solicitation AND
+  hc_phi_bulk_export AND hc_phi_reidentification AND hc_phi_smuggle_out_of_scope

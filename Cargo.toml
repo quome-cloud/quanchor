@@ -1,0 +1,140 @@
+[package]
+name = "quokkaguard"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "QUOKKAGUARD — confidential-computing fork of QFIRE: an attestation-rooted harness firewall for self-improving clinical LLM agents (proxy + CLI + benchmark harness)"
+license = "Apache-2.0"
+publish = false
+authors = ["Quome, Inc."]
+repository = "https://github.com/quome-cloud/quanchor"
+default-run = "qfire"
+
+# NOTE: the crate retains the `qfire` lib + binary name so the ~60 v1 scripts and
+# `use qfire::` consumers keep working and v1 benchmarks reproduce unchanged. Only the
+# package identity / repo / branding move to QUOKKAGUARD.
+[lib]
+name = "qfire"
+path = "src/lib.rs"
+
+[[bin]]
+name = "qfire"
+path = "src/main.rs"
+
+[[bin]]
+name = "intentrun"
+path = "src/bin/intentrun.rs"
+
+[[bin]]
+name = "exfilrun"
+path = "src/bin/exfilrun.rs"
+
+[[bin]]
+name = "equityrun"
+path = "src/bin/equityrun.rs"
+
+[[bin]]
+name = "consentrun"
+path = "src/bin/consentrun.rs"
+
+[[bin]]
+name = "devicerun"
+path = "src/bin/devicerun.rs"
+
+[[bin]]
+name = "scalebench"
+path = "src/bin/scalebench.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "process", "fs", "io-util", "signal"] }
+axum = { version = "0.7", features = ["json", "tokio"] }
+hyper = { version = "1", features = ["full"] }
+tower = "0.5"
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+clap = { version = "4", features = ["derive", "wrap_help"] }
+anyhow = "1"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+sha2 = "0.10"
+hmac = "0.12"
+hex = "0.4"
+regex = "1"
+futures = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+csv = "1"
+rand = "0.8"
+rand_chacha = "0.3"
+owo-colors = "4"
+bytes = "1"
+async-trait = "0.1"
+dirs = "5"
+walkdir = "2"
+toml = "0.8"
+aho-corasick = "1"
+base64 = "0.22"
+subtle = "2"
+blake3 = "1"
+ed25519-dalek = { version = "2", features = ["batch"] }  # batch verification for the fast audit-verify path
+rayon = "1"                                              # data-parallel signature verification
+biscuit-auth = "6"  # paper 008: attenuable, offline-verifiable agent capability tokens
+
+# Optional ONNX prompt-injection classifier (protectai/deberta-v3-base-prompt-injection)
+ort = { version = "2.0.0-rc.9", optional = true, features = ["download-binaries"] }
+tokenizers = { version = "0.20", optional = true, default-features = false, features = ["onig"] }
+ndarray = { version = "0.16", optional = true }
+once_cell = { version = "1", optional = true }
+cedar-policy = { version = "4", optional = true }
+regorus = { version = "0.10.1", optional = true }
+
+[features]
+default = []
+onnx = ["dep:ort", "dep:tokenizers", "dep:ndarray", "dep:once_cell"]
+policy = ["dep:cedar-policy", "dep:regorus"]
+
+[dev-dependencies]
+tempfile = "3"
+criterion = "0.5"
+# Real third-party tamper-evident-log libraries for the paper-3 head-to-head (examples/audit_compare.rs).
+ct-merkle = "0.3"   # RFC 6962 Certificate Transparency append-only log
+rs_merkle = "1.5"   # general Merkle tree with inclusion proofs
+sha2v11 = { package = "sha2", version = "0.11" }  # ct-merkle needs digest 0.11; repo uses sha2 0.10
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+
+[[bin]]
+name = "intentdrift"
+path = "src/bin/intentdrift.rs"
+
+[[bin]]
+name = "driftbench"
+path = "src/bin/driftbench.rs"
+
+[[bin]]
+name = "passportbench"
+path = "src/bin/passportbench.rs"
+
+[[bin]]
+name = "redteamrun"
+path = "src/bin/redteamrun.rs"
+
+[[bench]]
+name = "audit_write"
+harness = false
+
+[[bench]]
+name = "audit_verify"
+harness = false
+
+[[bench]]
+name = "policy_latency"
+harness = false
+
+[[bench]]
+name = "identity_check"
+harness = false

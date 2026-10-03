@@ -1,0 +1,7 @@
+# Prescribing goal-integrity task chain (matrix).
+id: matrix_rx
+description: "Prescribing goal-integrity task (matrix)."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+expression: "rx_goal_integrity"

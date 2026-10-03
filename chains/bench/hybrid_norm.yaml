@@ -1,0 +1,6 @@
+id: bench_hybrid_norm
+description: "QFIRE hybrid + de-obfuscation normalization pass."
+mode: expression
+fail_policy: fail_closed
+normalize: true
+expression: "ablation_hybrid"

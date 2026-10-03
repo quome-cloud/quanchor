@@ -1,0 +1,6 @@
+id: bench_hybrid_trig
+description: "QFIRE hybrid + TRIGGERED de-obfuscation (expand only on encoding signal)."
+mode: expression
+fail_policy: fail_closed
+normalize_mode: triggered
+expression: "ablation_hybrid"

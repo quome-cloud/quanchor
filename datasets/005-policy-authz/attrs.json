@@ -1,0 +1,4 @@
+{
+  "prescriber|patient-1": {"active_encounter": true, "paneled": true, "max_dose_mg": 30},
+  "prescriber|patient-2": {"active_encounter": false, "paneled": true, "max_dose_mg": 30}
+}

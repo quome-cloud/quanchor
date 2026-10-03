@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the paper below."
+type: software
+title: "quanchor \u2014 A sealed goal anchor, hash-chained provenance ledger and goal-drift monitor for self-improving clinical agents"
+authors:
+  - family-names: "Schwoebel"
+    given-names: "James"
+repository-code: "https://github.com/quome-cloud/quanchor"
+license: Apache-2.0
+date-released: "2026-10-02"
+version: "2026-10-02-1c04c3a"
+keywords:
+  - clinical AI safety
+  - LLM agents
+  - HAARF
+  - IntentBench
+preferred-citation:
+  type: unpublished
+  title: "Pristine Weights, Poisoned Goals: Intent-Mutation Attacks on Self-Improving Clinical Agents and Attestation-Rooted Harness Defenses"
+  authors:
+  - family-names: "Schwoebel"
+    given-names: "James"
+  year: 2026
+  notes: "Preprint. Quome, QUOKKAGUARD program (quanchor module)"
+  url: "https://github.com/quome-cloud/quanchor"
+references:
+  - type: unpublished
+    title: "HAARF: Healthcare AI agents regulatory framework — a comprehensive security verification standard for autonomous AI systems in clinical environments"
+    authors:
+      - family-names: Schwoebel
+        given-names: Jim
+      - family-names: Frasch
+        given-names: Martin
+      - family-names: Spalding
+        given-names: Art
+      - family-names: Sewell
+        given-names: Ed
+      - family-names: Englert
+        given-names: Phil
+      - family-names: Halpert
+        given-names: Ben
+      - family-names: Overbay
+        given-names: Collin
+      - family-names: Semenec
+        given-names: Ingrida
+      - family-names: Shor
+        given-names: Joel
+    year: 2026
+    doi: 10.64898/2026.04.09.26350519
+    url: "https://www.medrxiv.org/content/10.64898/2026.04.09.26350519v1"
+  - type: article
+    title: "Beyond Injection Detection: A Positive-Security Prompt Firewall that Closes the Scope and PHI Gap SOTA Classifiers Miss in Healthcare"
+    authors:
+      - family-names: Schwoebel
+        given-names: James
+      - family-names: Semenec
+        given-names: Ingrida
+      - family-names: Rousseva
+        given-names: Jenia
+      - family-names: Frasch
+        given-names: Martin G.
+      - family-names: Thorstenson
+        given-names: Rome
+      - family-names: Bhatt
+        given-names: Manish
+    journal: medRxiv
+    year: 2026
+    doi: 10.64898/2026.06.04.26354950
+    url: "https://www.medrxiv.org/content/10.64898/2026.06.04.26354950v1"

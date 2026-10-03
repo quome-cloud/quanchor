@@ -1,0 +1,7 @@
+# Dosing goal-integrity task chain (matrix).
+id: matrix_dose
+description: "Dosing goal-integrity task (matrix)."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+expression: "dose_goal_integrity"

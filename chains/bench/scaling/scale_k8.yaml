@@ -1,0 +1,4 @@
+id: scale_k8
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_aho AND ablation_combined AND ablation_deberta AND ablation_entropy AND ablation_hybrid AND ablation_phi AND ablation_regex AND injection_classifier_only"

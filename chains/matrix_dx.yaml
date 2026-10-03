@@ -1,0 +1,7 @@
+# Differential-diagnosis goal-integrity task chain (matrix).
+id: matrix_dx
+description: "Differential-diagnosis goal-integrity task (matrix)."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+expression: "dx_goal_integrity"

@@ -1,0 +1,5 @@
+id: bench_entropy
+description: "Ablation: entropy/obfuscation heuristic only."
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_entropy"

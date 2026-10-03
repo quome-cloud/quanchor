@@ -1,0 +1,5 @@
+id: bench_regex
+description: "Ablation: lexical regex denylist only."
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_regex"

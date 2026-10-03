@@ -1,0 +1,18 @@
+# E7 per-suite agent chain (banking). Enforced by the QFIRE proxy in front of the
+# AgentDojo banking suite. Core prompt-injection guards (E7-local variants for
+# jailbreak/encoding/delimiter — see rules/e7/*.yaml; disclosed in findings) AND
+# the banking domain scope (rules/e7/scope_suites.yaml). Any detector firing -> BLOCK.
+id: e7_banking
+description: "E7 banking agent guard: core injection defense + banking domain scope."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+groups:
+  injection: >
+    injection_instruction_override AND injection_system_prompt_exfil AND
+    injection_role_manipulation AND e7_injection_jailbreak_dan AND
+    injection_restriction_bypass AND e7_injection_encoding_obfuscation AND
+    e7_injection_delimiter_escape AND injection_data_exfiltration AND
+    injection_tool_command_abuse AND injection_classifier_only
+expression: >
+  injection AND scope_e7_banking

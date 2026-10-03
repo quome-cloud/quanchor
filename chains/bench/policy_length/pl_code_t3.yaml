@@ -1,0 +1,5 @@
+id: pl_code_t3
+description: "Policy-length ablation: code, T3 full firewall."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_code_t3"

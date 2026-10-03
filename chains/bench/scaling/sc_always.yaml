@@ -1,0 +1,4 @@
+id: sc_always
+mode: expression
+fail_policy: fail_closed
+expression: "sc_always_rule"

@@ -1,0 +1,4 @@
+id: sc_gated
+mode: expression
+fail_policy: fail_closed
+expression: "sc_gated_rule"

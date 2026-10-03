@@ -1,0 +1,7 @@
+llama3.2:latest: ASR=0.400 [0.300,0.510]  prov_det=1.000 gd_lex_det=0.875 gd_sem_det=0.000  (n=80)
+llama3.1:8b: ASR=0.988 [0.933,0.998]  prov_det=1.000 gd_lex_det=0.949 gd_sem_det=0.101  (n=80)
+gemma2:9b: ASR=1.000 [0.954,1.000]  prov_det=1.000 gd_lex_det=1.000 gd_sem_det=0.150  (n=80)
+qwen3:4b: ASR=1.000 [0.954,1.000]  prov_det=1.000 gd_lex_det=0.787 gd_sem_det=0.000  (n=80)
+qwen3:8b: ASR=1.000 [0.954,1.000]  prov_det=1.000 gd_lex_det=1.000 gd_sem_det=0.000  (n=80)
+phi3.5:3.8b: ASR=0.938 [0.862,0.973]  prov_det=1.000 gd_lex_det=1.000 gd_sem_det=0.053  (n=80)
+deepseek-r1:14b: ASR=1.000 [0.954,1.000]  prov_det=1.000 gd_lex_det=1.000 gd_sem_det=0.100  (n=80)

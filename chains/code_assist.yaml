@@ -1,0 +1,22 @@
+# Code-assistance scope chain (expression mode).
+#
+# A request passes if it is clean (injection guards) AND it falls within at least
+# one legitimate code-assistance sub-scope. Malicious-coding and off-topic
+# prompts are blocked. Fail-closed.
+
+id: code_assist
+description: "Clean + within a defensive code-assistance scope."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+groups:
+  injection: >
+    injection_instruction_override AND injection_system_prompt_exfil AND
+    injection_jailbreak_dan AND injection_data_exfiltration AND
+    injection_tool_command_abuse
+  code_scope: >
+    code_explain_snippet OR code_debug_fix OR code_write_tests OR
+    code_refactor OR code_docs OR code_review OR code_explain_algorithm OR
+    code_regex_help OR code_readonly_sql OR code_explain_shell OR
+    code_api_usage OR code_dependency_build
+expression: "injection AND code_scope"

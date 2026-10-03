@@ -1,0 +1,4 @@
+id: scale_k2
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_aho AND ablation_combined"

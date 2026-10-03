@@ -1,0 +1,5 @@
+id: bench_phi
+description: "PHI-only detector (18 HIPAA Safe-Harbor identifiers)."
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_phi"

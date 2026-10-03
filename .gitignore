@@ -1,0 +1,30 @@
+/target
+**/*.rs.bk
+*.onnx
+models/
+.DS_Store
+**/.DS_Store
+._*
+__pycache__/
+*.py[cod]
+/audit.jsonl
+audit.key
+aibom.json
+aibom.key
+.export/
+
+# LaTeX build intermediates
+papers/**/main.aux
+papers/**/main.bbl
+papers/**/main.blg
+papers/**/main.log
+papers/**/main.out
+papers/**/main.toc
+papers/**/*.synctex.gz
+
+# Generated corpora for this paper (regenerate with the scripts; see README)
+datasets/002-pristine-weights/matrix/
+datasets/002-pristine-weights/intentbench/
+datasets/002-pristine-weights/intentbench-m3/
+datasets/002-pristine-weights/intentbench-m10/gguf/*.gguf
+datasets/002-pristine-weights/intentbench-m10/lora-adapters*/

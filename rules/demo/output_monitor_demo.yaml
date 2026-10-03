@@ -1,0 +1,19 @@
+# Demo rule for the live behavioral-monitor walkthrough.
+# regex allowlist forwards every request (ALLOW pre-forward); the post-response
+# output_monitor (run by the proxy when X-QFire-Monitor-Output is set) flags a
+# model reply containing a dose value outside the safe range [70, 180].
+- id: demo_output_monitor
+  domain: demo
+  scope: "Demo: forward the request, then check the model's response for dose values outside the safe clinical range."
+  short_circuit: stop_on_first_block
+  pipeline:
+    - type: regex
+      allow:
+        - '(?s).*'
+    - type: output_monitor
+      safe_range: [70.0, 180.0]
+  exemplars:
+    in_scope:
+      - "Say hello."
+    out_of_scope:
+      - "zzz_never_matches_placeholder"

@@ -1,0 +1,218 @@
+[
+  {
+    "task": "dose",
+    "step": 1,
+    "drift_lexical": 0.31818181818181823,
+    "drift_semantic": 0.03922487504907157,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dose",
+    "step": 2,
+    "drift_lexical": 0.4,
+    "drift_semantic": 0.08915672828812204,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dose",
+    "step": 3,
+    "drift_lexical": 0.53125,
+    "drift_semantic": 0.07409601775505392,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dose",
+    "step": 4,
+    "drift_lexical": 0.6153846153846154,
+    "drift_semantic": 0.08118268409146356,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dose",
+    "step": 5,
+    "drift_lexical": 0.6590909090909092,
+    "drift_semantic": 0.09526885578887256,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dose",
+    "step": 6,
+    "drift_lexical": 0.6875,
+    "drift_semantic": 0.1012536288935596,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "triage",
+    "step": 1,
+    "drift_lexical": 0.2222222222222222,
+    "drift_semantic": 0.017488145385903597,
+    "flagged_lexical": false,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "triage",
+    "step": 2,
+    "drift_lexical": 0.3913043478260869,
+    "drift_semantic": 0.0794872227266793,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "triage",
+    "step": 3,
+    "drift_lexical": 0.5333333333333333,
+    "drift_semantic": 0.09830373878197629,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "triage",
+    "step": 4,
+    "drift_lexical": 0.5882352941176471,
+    "drift_semantic": 0.1067269820451856,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "triage",
+    "step": 5,
+    "drift_lexical": 0.6111111111111112,
+    "drift_semantic": 0.1075857688504901,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "triage",
+    "step": 6,
+    "drift_lexical": 0.6585365853658536,
+    "drift_semantic": 0.1218091678740777,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "rx",
+    "step": 1,
+    "drift_lexical": 0.2777777777777778,
+    "drift_semantic": 0.014707639779769965,
+    "flagged_lexical": false,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "rx",
+    "step": 2,
+    "drift_lexical": 0.45833333333333337,
+    "drift_semantic": 0.036151979665560496,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "rx",
+    "step": 3,
+    "drift_lexical": 0.5357142857142857,
+    "drift_semantic": 0.03881546593216911,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "rx",
+    "step": 4,
+    "drift_lexical": 0.6060606060606061,
+    "drift_semantic": 0.04221134616356026,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "rx",
+    "step": 5,
+    "drift_lexical": 0.6578947368421053,
+    "drift_semantic": 0.04662134367455206,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "rx",
+    "step": 6,
+    "drift_lexical": 0.6829268292682926,
+    "drift_semantic": 0.05763533842321533,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dx",
+    "step": 1,
+    "drift_lexical": 0.19999999999999996,
+    "drift_semantic": 0.033757928446548346,
+    "flagged_lexical": false,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dx",
+    "step": 2,
+    "drift_lexical": 0.33333333333333337,
+    "drift_semantic": 0.0909433352990816,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dx",
+    "step": 3,
+    "drift_lexical": 0.4482758620689655,
+    "drift_semantic": 0.08825792292487211,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dx",
+    "step": 4,
+    "drift_lexical": 0.5151515151515151,
+    "drift_semantic": 0.09863946197281803,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dx",
+    "step": 5,
+    "drift_lexical": 0.5789473684210527,
+    "drift_semantic": 0.12039794216183775,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  },
+  {
+    "task": "dx",
+    "step": 6,
+    "drift_lexical": 0.6363636363636364,
+    "drift_semantic": 0.1153505492135094,
+    "flagged_lexical": true,
+    "flagged_semantic": false,
+    "flagged_provenance": true
+  }
+]

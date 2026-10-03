@@ -1,0 +1,17 @@
+# Single-rule judge chain for the JUDGE-MODEL ablation.
+#
+# The full hipaa_phi AND-chain saturates (blocks 100% of benign too), so it cannot
+# discriminate between backend judge models. This chain isolates ONE LLM scope
+# rule (hc_no_diagnosis, a single judge node) so the backend model's decision is
+# the only thing that determines the verdict — exactly what we want to vary.
+#
+# Ordered mode, default-allow: the rule BLOCKs when the judge says out-of-scope,
+# otherwise the prompt is allowed.
+id: judge_scope
+description: "Single LLM-judge scope rule (hc_no_diagnosis) — isolates the judge model."
+mode: ordered
+fail_policy: fail_closed
+provider: ollama
+default: allow
+rules:
+  - hc_no_diagnosis

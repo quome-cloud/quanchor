@@ -1,0 +1,5 @@
+id: bench_deberta
+description: "Ablation: DeBERTa-v3 classifier only (open SOTA detector baseline)."
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_deberta"

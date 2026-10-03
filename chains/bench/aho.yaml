@@ -1,0 +1,5 @@
+id: bench_aho
+description: "Ablation: Aho-Corasick keyword denylist only."
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_aho"

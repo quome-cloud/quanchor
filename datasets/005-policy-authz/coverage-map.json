@@ -1,0 +1,5 @@
+{
+  "C8.1": ["prescriber:order_medication", "nurse:administer", "role:view_record"],
+  "C8.2": ["dose_ceiling", "active_encounter", "panel_membership"],
+  "note": "maps HAARF requirements to the policy rules that enforce them (P3 provability)"
+}

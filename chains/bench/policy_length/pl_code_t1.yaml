@@ -1,0 +1,5 @@
+id: pl_code_t1
+description: "Policy-length ablation: code, T1 sentence."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_code_t1"

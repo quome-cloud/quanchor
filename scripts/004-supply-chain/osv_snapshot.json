@@ -1,0 +1,5 @@
+[
+  {"id":"OSV-2026-1001","package":"serde","versions":["1.0.100"],"severity":"HIGH"},
+  {"id":"OSV-2026-1002","package":"openssl","versions":["0.10.55"],"severity":"CRITICAL"},
+  {"id":"OSV-2026-1003","package":"time","versions":["0.3.20"],"severity":"MEDIUM"}
+]

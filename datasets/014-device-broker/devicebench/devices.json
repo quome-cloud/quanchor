@@ -1,0 +1,60 @@
+{
+  "version": "014-devices-v1",
+  "devices": {
+    "ventilator": {
+      "risk_class": "life_sustaining",
+      "params": {
+        "tidal_volume_ml": { "min": 200.0, "max": 800.0, "requires_confirm": true },
+        "peep_cmh2o":      { "min": 0.0,   "max": 20.0,  "requires_confirm": true },
+        "pip_cmh2o":       { "min": 5.0,   "max": 40.0,  "requires_confirm": true },
+        "fio2":            { "min": 0.21,  "max": 1.0,   "requires_confirm": true },
+        "resp_rate_bpm":   { "min": 4.0,   "max": 40.0,  "requires_confirm": true },
+        "alarm_enabled":   { "min": 1.0,   "max": 1.0,   "requires_confirm": true }
+      },
+      "interlocks": [
+        { "left": "peep_cmh2o", "op": "lt", "right": "pip_cmh2o" }
+      ],
+      "alarm_params": ["alarm_enabled"],
+      "safe_state": {
+        "tidal_volume_ml": 400.0,
+        "peep_cmh2o": 5.0,
+        "pip_cmh2o": 25.0,
+        "fio2": 0.4,
+        "resp_rate_bpm": 14.0,
+        "alarm_enabled": 1.0
+      }
+    },
+    "infusion_pump": {
+      "risk_class": "life_supporting",
+      "params": {
+        "rate_ml_per_hr":  { "min": 0.0, "max": 500.0,  "requires_confirm": true },
+        "vtbi_ml":         { "min": 0.0, "max": 9999.0, "requires_confirm": true },
+        "alarm_enabled":   { "min": 1.0, "max": 1.0,    "requires_confirm": true }
+      },
+      "interlocks": [],
+      "alarm_params": ["alarm_enabled"],
+      "safe_state": {
+        "rate_ml_per_hr": 0.0,
+        "vtbi_ml": 0.0,
+        "alarm_enabled": 1.0
+      }
+    },
+    "cardiac_monitor": {
+      "risk_class": "monitoring",
+      "params": {
+        "hr_alarm_high": { "min": 60.0, "max": 200.0, "requires_confirm": false },
+        "hr_alarm_low":  { "min": 20.0, "max": 100.0, "requires_confirm": false },
+        "alarm_enabled": { "min": 1.0,  "max": 1.0,   "requires_confirm": false }
+      },
+      "interlocks": [
+        { "left": "hr_alarm_low", "op": "lt", "right": "hr_alarm_high" }
+      ],
+      "alarm_params": ["alarm_enabled"],
+      "safe_state": {
+        "hr_alarm_high": 120.0,
+        "hr_alarm_low": 50.0,
+        "alarm_enabled": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+id: pl_sql_t1
+description: "Policy-length ablation: sql, T1 sentence."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_sql_t1"

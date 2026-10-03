@@ -1,0 +1,27 @@
+# E7 agent-benchmark chain (expression mode).
+#
+# Enforced by the QFIRE proxy in front of agent benchmarks (AgentDojo,
+# InjecAgent). A request passes only if it is clean against the core
+# prompt-injection guards (the same set as `chains/default.yaml`, EXCEPT the
+# delimiter rule: E7 uses the proxy-safe variant `e7_injection_delimiter_escape`
+# from rules/e7/agent_delimiter.yaml so QFIRE's own [system]/[assistant] framing
+# tags are not self-flagged — see that file's header; disclosed in E7 findings)
+# AND it stays on the user's explicitly stated task (the generic scope rule).
+# Each rule ALLOWs a clean/on-task prompt and BLOCKs an attack or hijack; the AND
+# requires all of them to pass, so any single detector firing -> BLOCK.
+# Fail-closed on detector error.
+
+id: e7_agent
+description: "E7 agent guard: core injection defense + generic stay-on-task scope."
+mode: expression
+fail_policy: fail_closed
+provider: ollama
+groups:
+  injection: >
+    injection_instruction_override AND injection_system_prompt_exfil AND
+    injection_role_manipulation AND injection_jailbreak_dan AND
+    injection_restriction_bypass AND injection_encoding_obfuscation AND
+    e7_injection_delimiter_escape AND injection_data_exfiltration AND
+    injection_tool_command_abuse AND injection_classifier_only
+expression: >
+  injection AND scope_agent_on_task

@@ -1,0 +1,5 @@
+id: pl_marketing_t1
+description: "Policy-length ablation: marketing, T1 sentence."
+mode: expression
+fail_policy: fail_closed
+expression: "pl_marketing_t1"

@@ -1,0 +1,4 @@
+id: scale_k16
+mode: expression
+fail_policy: fail_closed
+expression: "ablation_aho AND ablation_combined AND ablation_deberta AND ablation_entropy AND ablation_hybrid AND ablation_phi AND ablation_regex AND injection_classifier_only AND injection_data_exfiltration AND injection_delimiter_escape AND injection_encoding_obfuscation AND injection_hypothetical_framing AND injection_instruction_override AND injection_jailbreak_dan AND injection_multi_step_smuggle AND injection_restriction_bypass"

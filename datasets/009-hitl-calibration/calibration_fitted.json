@@ -1,0 +1,29 @@
+{
+  "bands": {
+    "high": [
+      0.12,
+      0.9
+    ],
+    "life_critical": [
+      0.06,
+      0.95
+    ],
+    "low": [
+      0.25,
+      0.8
+    ],
+    "medium": [
+      0.18,
+      0.85
+    ]
+  },
+  "bias": -3.668004,
+  "temperature": 0.75,
+  "version": "009-fitted-v1",
+  "w_block_conf": 9.845944,
+  "w_identity": 0.789926,
+  "w_policy": -3.040942,
+  "w_provenance": 0.805425,
+  "w_taint": 1.980851,
+  "w_tool_risk": -0.25514
+}
